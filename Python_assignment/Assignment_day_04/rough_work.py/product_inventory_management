@@ -1,0 +1,61 @@
+products=[]
+next_id=1
+def menu():
+
+    print("****menu****")
+    print("0,exit")
+    print("1.add product")
+    print("2.view_product")
+    print("3.search_product")
+    print("4.update_product")
+    print("5.delete_product")
+    try:
+        choice = int(input('Enter your choice: '))
+        if choice <0 :
+            choice = -1
+    except:
+        choice = -1
+    return choice
+
+def add_product():
+    global_next_id
+    print("-"*50)
+    b={}
+    
+    while True:
+        name=input("Enter your product:").strip()
+        if name==" ":
+            print("name cannot be empty:")
+        else:
+            break
+
+
+
+    
+def view_product():
+    pass
+def search_product():
+    pass
+def update_product():
+    pass
+def delete_product():
+    ...
+
+
+def main():
+    user_choice = menu()
+    while True:
+        if user_choice == 0:
+           break 
+        if user_choice == 1:
+            add_product()
+        elif user_choice == 2:
+            view_product()
+        elif user_choice == 3:
+            update_product()
+        elif user_choice == 4:
+            delete_product()
+        else:
+            print("Invalid choice! Please retry with valid value.")
+    print("Bye")
+main()
